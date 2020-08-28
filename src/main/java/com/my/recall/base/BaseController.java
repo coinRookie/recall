@@ -22,15 +22,15 @@ public class BaseController {
         resultMap.put("msg", ResponseCode.SUCCESS_MSG);
     }
 
-    public void seccussMap(Map resultMap,Object data){
+    public void seccussMap(Map resultMap, Object data) {
         resultMap.put("code", ResponseCode.SUCCESS_CODE);
-        resultMap.put("msg",ResponseCode.SUCCESS_MSG);
-        resultMap.put("data",data);
+        resultMap.put("msg", ResponseCode.SUCCESS_MSG);
+        resultMap.put("data", data);
     }
 
     public void seccussMap(Map resultMap, PageInfo pageInfo) {
-        resultMap.put("code",ResponseCode.SUCCESS_CODE);
-        resultMap.put("msg",ResponseCode.SUCCESS_MSG);
+        resultMap.put("code", ResponseCode.SUCCESS_CODE);
+        resultMap.put("msg", ResponseCode.SUCCESS_MSG);
         if (pageInfo != null) {
             resultMap.put("data", pageInfo.getList());
             resultMap.put("pageNo", pageInfo.getPageNum());
@@ -45,18 +45,16 @@ public class BaseController {
         resultMap.put(this.MSG_FLAG, errMsg);
     }
 
-    public void checkPage(Map<String,Object> param){
+    public void checkPage(Map<String, Object> param) {
         Integer pageNo = MapUtils.getInteger(param, "pageNo");
         Integer pageSize = MapUtils.getInteger(param, "pageSize");
-        if(pageNo > 30){
-            param.put("pageNo",30);
+        if (pageNo > 30) {
+            param.put("pageNo", 30);
         }
-        if (pageSize > 20){
-            param.put("pageSize",20);
+        if (pageSize > 20) {
+            param.put("pageSize", 20);
         }
     }
-
-
 
 
 }

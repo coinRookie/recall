@@ -18,7 +18,7 @@ public class StudentTest {
     private StudentService studentService;
 
     @Test
-    public void query(){
+    public void query() {
         List<Student> studentList = studentService.getStudentList();
         for (Student student : studentList) {
             System.out.println(student);
@@ -26,8 +26,9 @@ public class StudentTest {
 
 
     }
+
     @Test
-    public void query2(){
+    public void query2() {
         System.out.println("holle");
     }
 }

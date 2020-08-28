@@ -19,12 +19,13 @@ import java.util.Map;
 public class StudentController extends BaseController {
     @Autowired
     private StudentService studentService;
+
     @ResponseBody
-    @RequestMapping(value = "/list",method = RequestMethod.POST,produces = "application/json;charset=utf-8")
-    public Map getStudent(){
-        Map<String,Object> resuMap = new HashMap<>();
+    @RequestMapping(value = "/list", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
+    public Map getStudent() {
+        Map<String, Object> resuMap = new HashMap<>();
         //resuMap.put("data",studentService.getStudentList());
-        super.seccussMap(resuMap,studentService.getStudentList());
+        super.seccussMap(resuMap, studentService.getStudentList());
         return resuMap;
     }
 }
