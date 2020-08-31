@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-    <properties resource="application-test.properties"/>
+    <properties resource="application-dev.properties"/>
 
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <property name="beginningDelimiter" value="`"/>
@@ -27,9 +27,9 @@
         <javaClientGenerator targetPackage="com.my.recall.dao" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
-        <table tableName="student">
+        <table tableName="class_and_grade">
             <!--mysql 配置-->
-            <generatedKey column="s_id" sqlStatement="Mysql" identity="true"/>
+            <generatedKey column="pid" sqlStatement="Mysql" identity="true"/>
             <!--oracle 配置-->
             <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
         </table>
